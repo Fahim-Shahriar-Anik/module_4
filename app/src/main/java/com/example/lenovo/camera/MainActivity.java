@@ -28,20 +28,16 @@ public class MainActivity extends AppCompatActivity implements camera {
         if(takepic.resolveActivity(getPackageManager()) != null){
             startActivityForResult(takepic,REQUEST_IMAGE_CAPTURE);
         }
-
-    }
-    protected void onActivityResult(int resultCode, Intent data){
-        Bundle extras = data.getExtras();
-        Bitmap imageBitmap=(Bitmap) extras.get("data");
-        result.setImageBitmap(imageBitmap);
     }
 
-
-
-
-
-
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            result.setImageBitmap(imageBitmap);
+        }
+    }
 
 
 

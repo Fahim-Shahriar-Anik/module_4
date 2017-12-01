@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.lenovo.camera">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.lenovo.camera"
+    tools:ignore="ExtraText">
 
     <uses-feature android:name="android.hardware.Camera" android:required="true"></uses-feature>
-    +-
 
     <application
         android:allowBackup="true"
