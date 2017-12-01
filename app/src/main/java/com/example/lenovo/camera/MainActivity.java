@@ -23,6 +23,10 @@ public class MainActivity extends AppCompatActivity implements camera {
         result= (ImageView)findViewById(R.id.imageView);
     }
 
+
+
+
+
     public void dispatchTakePic(View view){
         Intent takepic=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if(takepic.resolveActivity(getPackageManager()) != null){
@@ -38,8 +42,5 @@ public class MainActivity extends AppCompatActivity implements camera {
             result.setImageBitmap(imageBitmap);
         }
     }
-
-
-
 
 }
